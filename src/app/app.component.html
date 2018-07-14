@@ -4,66 +4,107 @@
 
     <clr-header class="aka-header">
     
-      <div class="branding">
+      <section class="branding">
         <a class="nav-link">
           <clr-icon shape="certificate"></clr-icon>
           <span class="title">AKA</span>
         </a>
-      </div>
+      </section>
     
-      <div class="header-nav">
+      <section class="header-nav">
         <a href="#" class="nav-link active"><span class="nav-text">Mis cursos</span></a>
         <a href="#" class="nav-link"><span class="nav-text">Explorar</span></a>
-      </div>
+      </section>
     
-      <div class="header-actions">
+      <section class="header-actions">
         <a href="javascript://" class="nav-link nav-icon">
           <clr-icon shape="user" class="is-solid"></clr-icon>
         </a>
         <a href="javascript://" class="nav-link nav-icon">
           <clr-icon shape="help" class="is-solid"></clr-icon>
         </a>
-      </div>
+      </section>
     
     </clr-header>
     
     <clr-header class="aka-header">
     
-      <div class="header-nav">
+      <section class="header-nav">
         <a href="#" class="nav-link active"><span class="nav-text">Activos</span></a>
         <a href="#" class="nav-link"><span class="nav-text">En mi plan</span></a>
         <a href="#" class="nav-link"><span class="nav-text">Aprobados</span></a>
-      </div>
+      </section>
     
-      <div class="header-actions">
+      <section class="header-actions">
         <a href="javascript://" class="nav-link nav-icon">
           <clr-icon shape="search"></clr-icon>
         </a>
-      </div>
+      </section>
     
     </clr-header>
 
   </div>
 
-  <!--  -->
   <div class="content-container">
 
-    <div class="content-area">
-      
-    </div>
+    <section class="content-area">
+
+      <div
+      *ngIf="showLogin"
+      class="fullscreen-modal">
+        <clr-icon shape="times" size="24" class="close"></clr-icon>
+
+        <div class="login-layout">
+          <aside class="promotional-banner">
+            <img src="/assets/images/login-sidebar.jpg" alt="Sign In">
+          </aside>
+
+          <aside class="login-container">
+            <div class="login-form">
+              <div class="profile-picture">
+                <img src="/assets/images/profile-mock.jpg" alt="User Name" class="circular">
+              </div>
+              
+              <div class="external-signin">
+                <div>
+                  <h5>Entra con tu perfil</h5>
+                  <hr>
+                </div>
+                <div class="btn-group btn-primary">
+                  <button class="btn">Facebook</button>
+                  <button class="btn">Twitter</button>
+                  <button class="btn">GitHub</button>
+                  <button class="btn">Google</button>
+                </div>
+              </div>
+              
+              <form clrForm>
+                <div class="form-block">
+                  <h5>O con tus datos</h5>
+                  <hr>
+                  <clr-input-container>
+                    <label>Email</label>
+                    <input clrInput type="text" [(ngModel)]="email" name="email" required />
+                    <clr-control-error *clrIfError="'required'">El email es requerido para iniciar sesión</clr-control-error>
+                  </clr-input-container>
+                                
+                  <clr-input-container>
+                    <label>Contraseña</label>
+                    <input clrInput type="password" [(ngModel)]="password" name="password" required />
+                    <clr-control-error *clrIfError="'required'">El password es requerido para iniciar sesión</clr-control-error>
+                  </clr-input-container>
+                </div>
+              
+                <button class="btn btn-primary btn-block">Entrar</button>
+              </form>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+
+    </section>
 
   </div>
-
-  <!-- <clr-modal [(clrModalOpen)]="opened" [clrModalClosable]="false">
-    <h3 class="modal-title">No "x" in the top-right corner</h3>
-    <div class="modal-body">
-      <p>Clicking on the backdrop doesn't do anything.</p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-primary" (click)="opened = false">
-          I'm the only way to close the modal!
-      </button>
-    </div>
-  </clr-modal> -->
 
 </clr-main-container>

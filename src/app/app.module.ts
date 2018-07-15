@@ -5,10 +5,14 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ClarityModule, ClrFormsNextModule } from "@clr/angular";
 
 import { AppComponent } from './app.component';
+import { AkaNavigationComponent } from './commons/components/aka-navigation/aka-navigation.component';
+import { AkaLoginComponent } from './commons/components/aka-login/aka-login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AkaNavigationComponent,
+    AkaLoginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,53 @@
+@import '../../../../scss-imports';
+
+.aka-header {
+  position: relative;
+  background-color: $background-color-primary;
+  border-bottom: 1px solid #fff;
+
+  .header-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    a.nav-link {
+      text-transform: uppercase;
+      opacity: 1;
+
+      &:before {
+        position: absolute !important;
+        content: "" !important;
+        display: block !important;
+        background: #fff !important;
+        opacity: 1 !important;
+        height: 2px !important;
+        width: initial !important;
+        top: initial !important;
+
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        transition: right .2s;
+      }
+
+      &:after {
+        display: none !important;
+      }
+    }
+    a.nav-link.active {
+      background: none;
+
+      &:before {
+        right: 0;
+      }
+    }
+    a.nav-link:hover {
+      &:before {
+        right: 0;
+      }
+    }
+    a.nav-link.active:hover {
+      color: white;
+    }
+  }
+}

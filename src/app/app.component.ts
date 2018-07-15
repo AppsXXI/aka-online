@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public showLogin: boolean = true;
+  public showLogin: boolean = false;
 }

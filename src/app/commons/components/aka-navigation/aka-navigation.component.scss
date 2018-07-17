@@ -4,6 +4,11 @@
   position: relative;
   background-color: $background-color-primary;
   border-bottom: 1px solid #fff;
+  text-shadow: 0 0 3px rgba(0, 0, 0, .8);
+
+  .branding {
+    min-width: auto;
+  }
 
   .header-nav {
     position: absolute;
@@ -12,7 +17,9 @@
 
     a.nav-link {
       text-transform: uppercase;
+      box-shadow: 0;
       opacity: 1;
+      transition: box-shadow .2s;
 
       &:before {
         position: absolute !important;
@@ -42,12 +49,41 @@
       }
     }
     a.nav-link:hover {
+      box-shadow: 0 4px 5px -5px rgba(0, 0, 0, .8);
+
       &:before {
         right: 0;
       }
     }
     a.nav-link.active:hover {
       color: white;
+    }
+  }
+}
+
+:host-context(.path-rule-login) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  box-shadow: none;
+
+  .aka-header {
+    background: transparent;
+    border: 0;
+
+    &.second-header {
+      display: none;
+    }
+
+    .header-nav {
+      position: static;
+      transform: none;
+    }
+
+    .header-actions {
+      display: none;
     }
   }
 }

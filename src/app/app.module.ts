@@ -9,13 +9,17 @@ import { AppComponent } from './app.component';
 import { AkaNavigationComponent } from './commons/components/aka-navigation/aka-navigation.component';
 import { AkaLoginComponent } from './commons/components/aka-login/aka-login.component';
 import { AkaLoginScreenComponent } from './components/aka-login-screen/aka-login-screen.component';
+import { AkaModalComponent } from './commons/components/aka-modal/aka-modal.component';
+
+import { AkaBasicsService } from './commons/services/aka-basics.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     AkaNavigationComponent,
     AkaLoginComponent,
-    AkaLoginScreenComponent
+    AkaLoginScreenComponent,
+    AkaModalComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,9 @@ import { AkaLoginScreenComponent } from './components/aka-login-screen/aka-login
     ClrFormsNextModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AkaBasicsService
+  ],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })

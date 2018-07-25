@@ -10,23 +10,3 @@ hr {
 .aka-shadow {
   box-shadow: 0 0px 4px rgba(0,0,0,.5);
 }
-
-/* MODAL */
-/* FULL SCREEN */
-.fullscreen-modal {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #fff;
-
-  clr-icon.close {
-    position: absolute;
-    z-index: 101;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-  }
-}

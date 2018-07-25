@@ -1,0 +1,8 @@
+<clr-modal
+[(clrModalOpen)]="opened"
+[clrModalSize]="size"
+[ngClass]="classes">
+  <div class="modal-body">
+    <ng-container *ngTemplateOutlet="template"></ng-container>
+  </div>
+</clr-modal>

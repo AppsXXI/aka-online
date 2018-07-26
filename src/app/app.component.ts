@@ -1,22 +1,12 @@
-import { Component, OnInit, Renderer2, ViewChild, TemplateRef, AfterViewInit } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
-import { AkaModalComponent } from './commons/components/aka-modal/aka-modal.component';
-import { AkaBasicsService } from './commons/services/aka-basics.service';
-import { AkaLoginComponent } from './commons/components/aka-login/aka-login.component';
-import { CONSTANTS } from './app-constants';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, AfterViewInit {
-
-  @ViewChild('akamodal')
-  private akamodal: AkaModalComponent;
-
-  @ViewChild('akalogin')
-  private akalogin: TemplateRef<any>;
+export class AppComponent {
 
   private previousUrl: string;
   private classPrefix: string = 'path-rule-';
@@ -25,8 +15,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   constructor(
     private router: Router,
-    private renderer: Renderer2,
-    private basics: AkaBasicsService
+    private renderer: Renderer2
   ) {
     this.router.events
     .subscribe((event) => {
@@ -49,31 +38,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     });
   }
 
-  ngOnInit() {
-    // 
-  }
-
-  ngAfterViewInit() {
-    this.basics.onModal().subscribe((modal: any) => {
-      let modalTemplate: TemplateRef<any>;
-
-      switch(modal.modal) {
-        case CONSTANTS.MODALS.LOGIN:
-          modalTemplate = this.akalogin;
-          break;
-      }
-      
-      if (modal.shown) {
-        this.akamodal.set({
-          size: 'fs',
-          classes: ['fullscreen']
-        });
-
-        this.akamodal.open(modalTemplate);
-      }
-    });
-  }
-  
   private changeClasses() {
     if (this.classToRemove) {
       this.renderer.removeClass(document.body, this.classToRemove);

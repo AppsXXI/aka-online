@@ -6,6 +6,7 @@ import { ClarityModule, ClrFormsNextModule } from "@clr/angular";
 import { AppRoutingModule } from './app-routing.module';
 
 // COMPONENTS
+import { HTitleComponent } from './commons/components/basics/h-title/h-title.component';
 import { AppComponent } from './app.component';
 import { AkaNavigationComponent } from './commons/components/aka-navigation/aka-navigation.component';
 import { AkaLoginComponent } from './commons/components/aka-login/aka-login.component';
@@ -19,6 +20,7 @@ import { AkaBasicsService } from './commons/services/aka-basics.service';
 
 @NgModule({
   declarations: [
+    HTitleComponent,
     AppComponent,
     AkaNavigationComponent,
     AkaLoginComponent,

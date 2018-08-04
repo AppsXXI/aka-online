@@ -1,0 +1,24 @@
+<ng-template #textTemplate>
+  <ng-content></ng-content>
+</ng-template>
+
+<ng-container [ngSwitch]="level">
+  <h1 *ngSwitchCase="1">
+    <span><ng-container *ngTemplateOutlet="textTemplate"></ng-container></span>
+  </h1>
+  <h2 *ngSwitchCase="2">
+    <span><ng-container *ngTemplateOutlet="textTemplate"></ng-container></span>
+  </h2>
+  <h3 *ngSwitchCase="3">
+    <span><ng-container *ngTemplateOutlet="textTemplate"></ng-container></span>
+  </h3>
+  <h4 *ngSwitchCase="4">
+    <span><ng-container *ngTemplateOutlet="textTemplate"></ng-container></span>
+  </h4>
+  <h5 *ngSwitchCase="5">
+    <span><ng-container *ngTemplateOutlet="textTemplate"></ng-container></span>
+  </h5>
+  <h6 *ngSwitchCase="6">
+    <span><ng-container *ngTemplateOutlet="textTemplate"></ng-container></span>
+  </h6>
+</ng-container>

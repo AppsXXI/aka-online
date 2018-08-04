@@ -1,0 +1,145 @@
+@import '../../../scss-imports';
+
+$course-min-width: 380px;
+$course-max-width: .5fr;
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($course-min-width, $course-max-width));
+  grid-gap: 30px;
+
+  .course {
+    position: relative;
+    min-width: $course-min-width;
+    transition: box-shadow .3s ease, border .3s ease;
+
+    &:hover {
+      box-shadow: 0 0.125rem 0 0 #aaa, 0 0 30px 0 rgba(0, 0, 0, 0.3);
+      border-color: #aaa;
+    }
+
+    .card-header {
+      h4 {
+        margin: 0;
+      }
+
+      .tooltip {
+        display: block;
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        top: -4px;
+        right: 15px;
+
+        &:hover {
+          clr-icon {
+            color: $color-palet-orange-primary;
+          }
+        }
+      }
+
+      clr-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #aaa;
+        cursor: pointer;
+
+        &.is-solid {
+          color: #fff;
+        }
+      }
+
+    }
+
+    .card-block {
+      .card-media-block {
+        .card-media-image {
+          border-radius: 50%;
+          background: #ddd;
+          overflow: hidden;  
+        }
+
+        .card-media-description {
+          margin: 0 0 0 .75rem;
+        }
+        
+        .card-text,
+        .card-labels {
+          font-size: 12px;
+          line-height: 20px;
+
+          .course-label {
+            margin-right: 15px;
+
+            clr-icon {
+              position: relative;
+              top: -1px;
+            }
+
+            .label-text {
+              font-size: 10px;
+              margin-left: 4px;
+              text-transform: uppercase;
+            }
+
+            &.dificult {
+              clr-icon {
+                color: #318700;
+              }
+            }
+            &.rating {
+              clr-icon {
+                color: #FFDC0B;
+              }
+            }
+            &.is-free {
+              clr-icon {
+                color: #318700;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .card-footer {
+      .progress {
+        overflow: visible;
+
+        span {
+          position: absolute;
+          transform: translate(0, -100%);
+          font-size: 10px;
+          line-height: 14px;
+        }
+      }
+      .course-teachers {
+        display: flex;
+        float: right;
+
+        span {
+          font-size: 12px;
+        }
+
+        .teacher {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          margin-left: 8px;
+          background: #ddd;
+          border-radius: 50%;
+          border: 1px solid #ddd;
+          
+          img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}

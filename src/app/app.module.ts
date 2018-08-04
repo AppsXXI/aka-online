@@ -5,23 +5,29 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ClarityModule, ClrFormsNextModule } from "@clr/angular";
 import { AppRoutingModule } from './app-routing.module';
 
+// COMPONENTS
+import { HTitleComponent } from './commons/components/basics/h-title/h-title.component';
 import { AppComponent } from './app.component';
 import { AkaNavigationComponent } from './commons/components/aka-navigation/aka-navigation.component';
 import { AkaLoginComponent } from './commons/components/aka-login/aka-login.component';
 import { AkaLoginScreenComponent } from './components/aka-login-screen/aka-login-screen.component';
 import { AkaModalComponent } from './commons/components/aka-modal/aka-modal.component';
 import { AkaModalsComponent } from './commons/components/aka-modals/aka-modals.component.';
+import { AkaMyCoursesComponent } from './components/aka-my-courses/aka-my-courses.component';
 
+// SERVICES
 import { AkaBasicsService } from './commons/services/aka-basics.service';
 
 @NgModule({
   declarations: [
+    HTitleComponent,
     AppComponent,
     AkaNavigationComponent,
     AkaLoginComponent,
     AkaLoginScreenComponent,
     AkaModalComponent,
-    AkaModalsComponent
+    AkaModalsComponent,
+    AkaMyCoursesComponent
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,7 @@
 
   a.nav-link {
     cursor: pointer;
+    opacity: 1;
   }
 
   .header-nav {
@@ -29,7 +30,8 @@
         position: absolute !important;
         content: "" !important;
         display: block !important;
-        background: #fff !important;
+        // background: #fff !important;
+        background: #fff;
         opacity: 1 !important;
         height: 2px !important;
         width: initial !important;
@@ -61,6 +63,25 @@
     }
     a.nav-link.active:hover {
       color: white;
+    }
+  }
+
+  &.second-header {
+    background-color: #fff;
+    border-bottom-color: $background-color-primary;
+
+    a.nav-link {
+      color: $background-color-primary;
+      text-shadow: none;
+
+      &:before {
+        background: $background-color-primary !important;
+      }
+
+      // &.active,
+      &.active:hover {
+        color: $background-color-primary !important;
+      }
     }
   }
 }

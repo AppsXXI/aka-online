@@ -13,6 +13,7 @@ import { AkaLoginComponent } from './commons/components/aka-login/aka-login.comp
 import { AkaLoginScreenComponent } from './components/aka-login-screen/aka-login-screen.component';
 import { AkaModalComponent } from './commons/components/aka-modal/aka-modal.component';
 import { AkaModalsComponent } from './commons/components/aka-modals/aka-modals.component.';
+import { AkaCourseCard } from './commons/components/aka-course-card/aka-course-card.component';
 import { AkaMyCoursesComponent } from './components/aka-my-courses/aka-my-courses.component';
 
 // SERVICES
@@ -27,6 +28,7 @@ import { AkaBasicsService } from './commons/services/aka-basics.service';
     AkaLoginScreenComponent,
     AkaModalComponent,
     AkaModalsComponent,
+    AkaCourseCard,
     AkaMyCoursesComponent
   ],
   imports: [

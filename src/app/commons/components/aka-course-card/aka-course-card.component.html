@@ -1,0 +1,70 @@
+<div class="card course"
+[ngClass]="{'marked': marked, 'approved': approved}">
+  <div class="card-header">
+    <h4>{{title}}</h4>
+
+    <span role="tooltip"
+    aria-haspopup="true"
+    class="tooltip tooltip-sm tooltip-top-left"
+    (click)="marked = !marked">
+      <clr-icon shape="bookmark" size="28" class="is-solid"></clr-icon>
+      <clr-icon shape="bookmark" size="28"></clr-icon>
+      <span *ngIf="marked; else mark"
+      class="tooltip-content">En mi plan</span>
+      <ng-template #mark>
+        <span class="tooltip-content">Agregar a mi plan</span>
+      </ng-template>
+    </span>
+  </div>
+
+  <div class="card-block">
+    <div class="card-media-block">
+      <!-- <img src="..." class="card-media-image"> -->
+      <span class="card-media-image"></span>
+
+      <div class="card-media-description">
+        <p class="card-text">{{brief}}</p>
+
+        <div class="card-labels">
+          <span role="tooltip" aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-right course-label dificult">
+            <clr-icon shape="bar-chart" class="is-solid" size="14"></clr-icon>
+            <span class="label-text">{{difficult}}/10</span>
+            <span class="tooltip-content">Dificultad:<br>{{difficult}} de 10</span>
+          </span>
+
+          <span role="tooltip" aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-right course-label rating">
+            <clr-icon shape="star" class="is-solid" size="14"></clr-icon>
+            <span class="label-text">{{rating}}/5</span>
+            <span class="tooltip-content">Valoración:<br>{{rating}} de 5</span>
+          </span>
+
+          <span *ngIf="isFree" role="tooltip" aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-right course-label is-free">
+            <clr-icon shape="dollar" class="is-solid" size="14"></clr-icon>
+            <span class="label-text">Gratis</span>
+            <span class="tooltip-content">¡Este curso es gratuito!</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-footer">
+    <div class="progress success">
+      <progress [value]="coverage" max="100"></progress>
+      <span [ngStyle]="{'right': (100 - coverage) + '%'}">{{coverage}}%</span>
+    </div>
+    <button class="btn btn-primary btn-sm">Continuar</button>
+
+    <div class="course-teachers">
+      <span>Docentes:</span>
+      <span role="tooltip" aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left teacher">
+        <img src="/assets/images/profile-mock.jpg" alt="Nombre Docente">
+        <span class="tooltip-content">Nombre del docente</span>
+      </span>
+      <span role="tooltip" aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left teacher">
+        <img src="/assets/images/profile-mock.jpg" alt="Nombre Docente">
+        <span class="tooltip-content">Nombre del docente</span>
+      </span>
+    </div>
+  </div>
+</div>

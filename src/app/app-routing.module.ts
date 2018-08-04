@@ -6,6 +6,11 @@ import { AkaMyCoursesComponent } from './components/aka-my-courses/aka-my-course
 
 const ROUTES: Routes = [
   {
+    path: '',
+    redirectTo: 'my-courses',
+    pathMatch: 'full'
+  },
+  {
     path: 'login',
     component: AkaLoginScreenComponent
   },

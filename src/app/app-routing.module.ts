@@ -3,9 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AkaLoginScreenComponent } from './components/aka-login-screen/aka-login-screen.component';
 import { AkaMyCoursesComponent } from './components/aka-my-courses/aka-my-courses.component';
-import { AkaActiveCourses } from './components/aka-my-courses/aka-active-courses/aka-active-courses.component';
-import { AkaApprovedCourses } from './components/aka-my-courses/aka-approved-courses/aka-approved-courses.component';
+import { AkaActiveCoursesComponent } from './components/aka-my-courses/aka-active-courses/aka-active-courses.component';
+import { AkaApprovedCoursesComponent } from './components/aka-my-courses/aka-approved-courses/aka-approved-courses.component';
 import { AkaPathComponent } from './components/aka-my-courses/aka-path-courses/aka-path-courses.component';
+import { Aka404NotFoundComponent } from './components/aka-404-not-found/aka-404-not-found.component';
 
 const ROUTES: Routes = [
   {
@@ -23,7 +24,7 @@ const ROUTES: Routes = [
     children: [
       {
         path: 'active',
-        component: AkaActiveCourses
+        component: AkaActiveCoursesComponent
       },
       {
         path: 'path',
@@ -31,9 +32,13 @@ const ROUTES: Routes = [
       },
       {
         path: 'approved',
-        component: AkaApprovedCourses
+        component: AkaApprovedCoursesComponent
       }
     ]
+  },
+  {
+    path: '**',
+    component: Aka404NotFoundComponent
   }
 ];
 

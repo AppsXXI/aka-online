@@ -15,6 +15,9 @@ import { AkaModalComponent } from './commons/components/aka-modal/aka-modal.comp
 import { AkaModalsComponent } from './commons/components/aka-modals/aka-modals.component.';
 import { AkaCourseCard } from './commons/components/aka-course-card/aka-course-card.component';
 import { AkaMyCoursesComponent } from './components/aka-my-courses/aka-my-courses.component';
+import { AkaActiveCourses } from './components/aka-my-courses/aka-active-courses/aka-active-courses.component';
+import { AkaApprovedCourses } from './components/aka-my-courses/aka-approved-courses/aka-approved-courses.component';
+import { AkaPathComponent } from './components/aka-my-courses/aka-path-courses/aka-path-courses.component';
 
 // SERVICES
 import { AkaBasicsService } from './commons/services/aka-basics.service';
@@ -29,7 +32,10 @@ import { AkaBasicsService } from './commons/services/aka-basics.service';
     AkaModalComponent,
     AkaModalsComponent,
     AkaCourseCard,
-    AkaMyCoursesComponent
+    AkaMyCoursesComponent,
+    AkaActiveCourses,
+    AkaApprovedCourses,
+    AkaPathComponent
   ],
   imports: [
     BrowserModule,

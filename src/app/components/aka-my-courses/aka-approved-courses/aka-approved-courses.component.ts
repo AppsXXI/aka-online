@@ -5,4 +5,4 @@ import { Component } from "@angular/core";
   templateUrl: './aka-approved-courses.component.html',
   styleUrls: ['./aka-approved-courses.component.scss']
 })
-export class AkaApprovedCourses {}
+export class AkaApprovedCoursesComponent {}

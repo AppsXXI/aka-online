@@ -5,7 +5,7 @@ import { Component, Input } from "@angular/core";
   templateUrl: './aka-course-card.component.html',
   styleUrls: ['./aka-course-card.component.scss']
 })
-export class AkaCourseCard {
+export class AkaCourseCardComponent {
 
   @Input('approved')
   public approved: boolean;

@@ -10,7 +10,7 @@ import { AkaPathComponent } from './components/aka-my-courses/aka-path-courses/a
 const ROUTES: Routes = [
   {
     path: '',
-    redirectTo: 'my-courses',
+    redirectTo: 'my-courses/active',
     pathMatch: 'full'
   },
   {

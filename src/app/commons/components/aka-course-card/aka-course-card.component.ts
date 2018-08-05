@@ -1,11 +1,11 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
   selector: 'aka-course-card',
   templateUrl: './aka-course-card.component.html',
   styleUrls: ['./aka-course-card.component.scss']
 })
-export class AkaCourseCardComponent {
+export class AkaCourseCardComponent implements OnInit {
 
   @Input('approved')
   public approved: boolean;
@@ -29,5 +29,13 @@ export class AkaCourseCardComponent {
   public coverage: number;
   @Input('teachers')
   public teachers: any[];
+
+  public animate: boolean = false;
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.animate = true;
+    }, 50);
+  }
 
 }

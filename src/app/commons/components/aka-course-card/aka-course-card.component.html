@@ -1,5 +1,5 @@
 <div class="card course"
-[ngClass]="{'marked': marked, 'approved': approved}">
+[ngClass]="{'marked': marked, 'approved': approved, 'animate': animate}">
   <div class="card-header">
     <h4>{{title}}</h4>
 
@@ -53,6 +53,7 @@
       <progress [value]="coverage" max="100"></progress>
       <span [ngStyle]="{'right': (100 - coverage) + '%'}">{{coverage}}%</span>
     </div>
+    
     <button class="btn btn-primary btn-sm">Continuar</button>
 
     <div class="course-teachers">

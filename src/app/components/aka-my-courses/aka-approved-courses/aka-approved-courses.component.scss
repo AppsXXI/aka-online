@@ -1,0 +1,14 @@
+$course-min-width: 380px;
+$course-max-width: 1fr;
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($course-min-width, $course-max-width));
+  grid-gap: 30px;
+
+  aka-course-card {
+    :ng-deep .course {
+      min-width: $course-min-width;
+    }
+  }
+}

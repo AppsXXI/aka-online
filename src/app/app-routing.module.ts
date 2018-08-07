@@ -8,30 +8,32 @@ import { AkaApprovedCoursesComponent } from './components/aka-my-courses/aka-app
 import { AkaPathComponent } from './components/aka-my-courses/aka-path-courses/aka-path-courses.component';
 import { Aka404NotFoundComponent } from './components/aka-404-not-found/aka-404-not-found.component';
 
+import { CONSTANTS } from './app-constants';
+
 const ROUTES: Routes = [
   {
     path: '',
-    redirectTo: 'my-courses/active',
+    redirectTo: CONSTANTS.ROUTES.MY_COURSES.ACTIVE.FULL_URL,
     pathMatch: 'full'
   },
   {
-    path: 'login',
+    path: CONSTANTS.ROUTES.LOGIN.URL,
     component: AkaLoginScreenComponent
   },
   {
-    path: 'my-courses',
+    path: CONSTANTS.ROUTES.MY_COURSES.URL,
     component: AkaMyCoursesComponent,
     children: [
       {
-        path: 'active',
+        path: CONSTANTS.ROUTES.MY_COURSES.ACTIVE.URL,
         component: AkaActiveCoursesComponent
       },
       {
-        path: 'path',
+        path: CONSTANTS.ROUTES.MY_COURSES.PATH.URL,
         component: AkaPathComponent
       },
       {
-        path: 'approved',
+        path: CONSTANTS.ROUTES.MY_COURSES.APPROVED.URL,
         component: AkaApprovedCoursesComponent
       }
     ]

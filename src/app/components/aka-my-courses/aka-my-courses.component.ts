@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Router, NavigationStart } from "@angular/router";
+import { CONSTANTS } from "../../app-constants";
 
 @Component({
   selector: 'aka-my-courses',
@@ -22,8 +23,8 @@ export class AkaMyCoursesComponent {
   }
 
   private redirectFromMyCourses(url) {
-    if (url == "/my-courses") {
-      this.router.navigate(['/my-courses/active']);
+    if (url == `/${CONSTANTS.ROUTES.MY_COURSES.URL}`) {
+      this.router.navigate([`/${CONSTANTS.ROUTES.MY_COURSES.ACTIVE.FULL_URL}`]);
     }
   }
   

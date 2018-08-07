@@ -17,21 +17,27 @@ export class AkaNavigationComponent {
   private navexplore: TemplateRef<any>;
   
   public navControls: TemplateRef<any>;
+  public ROUTES: any;
   
   constructor(
     private router: Router,
     private basics: AkaBasicsService
   ) {
+    this.ROUTES = CONSTANTS.ROUTES;
+    
     this.router.events
     .subscribe((event) => {
       if (event instanceof NavigationStart) {
         switch(event.url) {
-          case '/my-courses/active':
-          case '/my-courses/path':
-          case '/my-courses/approved':
+          case `/${this.ROUTES.MY_COURSES.URL}`:
+          case `/${this.ROUTES.MY_COURSES.ACTIVE.FULL_URL}`:
+          case `/${this.ROUTES.MY_COURSES.PATH.FULL_URL}`:
+          case `/${this.ROUTES.MY_COURSES.APPROVED.FULL_URL}`:
             this.navControls = this.navmycourses;
             break;
-          case '/explore':
+          case `/${this.ROUTES.EXPLORE.URL}`:
+          case `/${this.ROUTES.EXPLORE.CATEGORY.FULL_URL}`:
+          case `/${this.ROUTES.EXPLORE.ALPHABET.FULL_URL}`:
             this.navControls = this.navexplore;
             break;
         }

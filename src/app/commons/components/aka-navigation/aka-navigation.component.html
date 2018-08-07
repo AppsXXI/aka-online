@@ -7,7 +7,6 @@
     </a>
   </section>
 
-  <!-- class="nav-link active" -->
   <section class="header-nav">
     <a routerLink="/my-courses"
     routerLinkActive="active"
@@ -34,6 +33,32 @@
 
 <clr-header class="aka-header second-header">
 
+  <ng-container *ngTemplateOutlet="navControls"></ng-container>
+  <!-- <section class="header-nav">
+    <a routerLink="/my-courses/active"
+    routerLinkActive="active"
+    class="nav-link"><span class="nav-text">Activos</span></a>
+
+    <a routerLink="/my-courses/path"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}"
+    class="nav-link"><span class="nav-text">En mi plan</span></a>
+    
+    <a routerLink="/my-courses/approved"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}"
+    class="nav-link"><span class="nav-text">Aprobados</span></a>
+  </section> -->
+
+  <section class="header-actions">
+    <a href="javascript://" class="nav-link nav-icon">
+      <clr-icon shape="search"></clr-icon>
+    </a>
+  </section>
+
+</clr-header>
+
+<ng-template #navmycourses>
   <section class="header-nav">
     <a routerLink="/my-courses/active"
     routerLinkActive="active"
@@ -49,11 +74,17 @@
     [routerLinkActiveOptions]="{exact: true}"
     class="nav-link"><span class="nav-text">Aprobados</span></a>
   </section>
+</ng-template>
 
-  <section class="header-actions">
-    <a href="javascript://" class="nav-link nav-icon">
-      <clr-icon shape="search"></clr-icon>
-    </a>
+<ng-template #navexplore>
+  <section class="header-nav">
+    <a routerLink="/explore/category"
+    routerLinkActive="active"
+    class="nav-link"><span class="nav-text">Categorías</span></a>
+
+    <a routerLink="/explore/alphabet"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}"
+    class="nav-link"><span class="nav-text">Orden alfabético</span></a>
   </section>
-
-</clr-header>
+</ng-template>

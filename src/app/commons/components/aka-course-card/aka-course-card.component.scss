@@ -3,7 +3,7 @@
 .course {
   position: relative;
   opacity: 0;
-  transform: scale(1.05) translate(-25%, 0);
+  transform: scale(1.05) translate(0, 5%);
   transition: box-shadow .3s ease, border .3s ease, opacity .3s ease, transform .3s ease;;
 
   &.animate {

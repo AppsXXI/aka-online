@@ -31,8 +31,11 @@ export class AkaCourseCardComponent implements OnInit {
   public teachers: any[];
 
   public animate: boolean = false;
+  public courseAction: string;
 
   ngOnInit() {
+    this.courseAction = !this.isStarted ? 'Comenzar' : (this.approved ? 'Completado' : 'Continuar');
+    
     setTimeout(() => {
       this.animate = true;
     }, 50);

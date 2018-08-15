@@ -54,12 +54,15 @@
       <span [ngStyle]="{'right': (100 - coverage) + '%'}">{{coverage}}%</span>
     </div>
     
-    <button *ngIf="isStarted && !approved" class="btn btn-primary btn-sm">Continuar</button>
-    <button *ngIf="!isStarted" class="btn btn-warning btn-sm">Comenzar</button>
-    <span *ngIf="approved" class="btn btn-icon btn-link btn-sm">
-      <clr-icon shape="check"></clr-icon>
-      Completado
-    </span>
+    <button class="btn btn-sm"
+    [ngClass]="{
+      'btn-warning': !isStarted,
+      'btn-icon btn-link': approved,
+      'btn-primary': isStarted && !approved
+    }">
+      <clr-icon *ngIf="approved" shape="check"></clr-icon>
+      {{courseAction}}
+    </button>
 
     <div class="course-teachers">
       <ng-container *ngIf="teachers.length > 1; else teacher">

@@ -29,6 +29,7 @@ export class AkaNavigationComponent {
     .subscribe((event) => {
       if (event instanceof NavigationStart) {
         switch(event.url) {
+          case `/`:
           case `/${this.ROUTES.MY_COURSES.URL}`:
           case `/${this.ROUTES.MY_COURSES.ACTIVE.FULL_URL}`:
           case `/${this.ROUTES.MY_COURSES.PATH.FULL_URL}`:

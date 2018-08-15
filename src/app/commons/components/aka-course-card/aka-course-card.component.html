@@ -54,17 +54,27 @@
       <span [ngStyle]="{'right': (100 - coverage) + '%'}">{{coverage}}%</span>
     </div>
     
-    <button class="btn btn-primary btn-sm">Continuar</button>
+    <button *ngIf="isStarted && !approved" class="btn btn-primary btn-sm">Continuar</button>
+    <button *ngIf="!isStarted" class="btn btn-warning btn-sm">Comenzar</button>
+    <span *ngIf="approved" class="btn btn-icon btn-link btn-sm">
+      <clr-icon shape="check"></clr-icon>
+      Completado
+    </span>
 
     <div class="course-teachers">
-      <span>Docentes:</span>
-      <span role="tooltip" aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left teacher">
-        <img src="/assets/images/profile-mock.jpg" alt="Nombre Docente">
-        <span class="tooltip-content">Nombre del docente</span>
-      </span>
-      <span role="tooltip" aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left teacher">
-        <img src="/assets/images/profile-mock.jpg" alt="Nombre Docente">
-        <span class="tooltip-content">Nombre del docente</span>
+      <ng-container *ngIf="teachers.length > 1; else teacher">
+        <span>Docentes:</span>
+      </ng-container>
+      <ng-template #teacher>
+        <span>{{teachers[0].name}}</span>
+      </ng-template>
+
+      <span *ngFor="let teacher of teachers"
+      role="tooltip"
+      aria-haspopup="true"
+      class="tooltip tooltip-sm tooltip-top-left teacher">
+        <img [src]="teacher.picture" [alt]="teacher.name">
+        <span class="tooltip-content">{{teacher.name}}</span>
       </span>
     </div>
   </div>

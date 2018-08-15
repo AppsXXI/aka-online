@@ -32,13 +32,18 @@ export class AkaCourseCardComponent implements OnInit {
 
   public animate: boolean = false;
   public courseAction: string;
+  public coverageRightPosition: number;
 
   ngOnInit() {
     this.courseAction = !this.isStarted ? 'Comenzar' : (this.approved ? 'Completado' : 'Continuar');
+    this.coverageRightPosition = 100 - this.coverage;
+
+    if (this.coverageRightPosition > 96) {
+      this.coverageRightPosition = 96;
+    }
     
     setTimeout(() => {
       this.animate = true;
     }, 50);
   }
-
 }

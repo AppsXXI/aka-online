@@ -51,7 +51,7 @@
   <div class="card-footer">
     <div class="progress success">
       <progress [value]="coverage" max="100"></progress>
-      <span [ngStyle]="{'right': (100 - coverage) + '%'}">{{coverage}}%</span>
+      <span [ngStyle]="{'right': coverageRightPosition + '%'}">{{coverage}}%</span>
     </div>
     
     <button class="btn btn-sm"

@@ -11,5 +11,7 @@ hr {
   width: 100%;
 }
 .aka-shadow {
+  position: relative;
+  z-index: 100;
   box-shadow: 0 0px 4px rgba(0,0,0,.5);
 }

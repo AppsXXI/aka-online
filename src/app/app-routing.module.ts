@@ -10,6 +10,8 @@ import { Aka404NotFoundComponent } from './components/aka-404-not-found/aka-404-
 
 import { CONSTANTS } from './app-constants';
 import { AkaExploreComponent } from './components/aka-explore/aka-explore.component';
+import { AkaCategoriesComponent } from './components/aka-explore/aka-categories/aka-categories.component';
+import { AkaDifficultyComponent } from './components/aka-explore/aka-difficulty/aka-difficulty.component';
 
 const ROUTES: Routes = [
   {
@@ -41,7 +43,17 @@ const ROUTES: Routes = [
   },
   {
     path: CONSTANTS.ROUTES.EXPLORE.URL,
-    component: AkaExploreComponent
+    component: AkaExploreComponent,
+    children: [
+      {
+        path: CONSTANTS.ROUTES.EXPLORE.CATEGORY.URL,
+        component: AkaCategoriesComponent
+      },
+      {
+        path: CONSTANTS.ROUTES.EXPLORE.DIFFICULTY.URL,
+        component: AkaDifficultyComponent
+      }
+    ]
   },
   {
     path: '**',

@@ -38,7 +38,7 @@ export class AkaNavigationComponent {
             break;
           case `/${this.ROUTES.EXPLORE.URL}`:
           case `/${this.ROUTES.EXPLORE.CATEGORY.FULL_URL}`:
-          case `/${this.ROUTES.EXPLORE.ALPHABET.FULL_URL}`:
+          case `/${this.ROUTES.EXPLORE.DIFFICULTY.FULL_URL}`:
             this.navControls = this.navexplore;
             break;
         }

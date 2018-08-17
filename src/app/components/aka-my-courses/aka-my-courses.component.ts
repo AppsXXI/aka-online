@@ -22,7 +22,7 @@ export class AkaMyCoursesComponent {
     });
   }
 
-  private redirectFromMyCourses(url) {
+  private redirectFromMyCourses(url: string): void {
     if (url == `/${CONSTANTS.ROUTES.MY_COURSES.URL}`) {
       this.router.navigate([`/${CONSTANTS.ROUTES.MY_COURSES.ACTIVE.FULL_URL}`]);
     }

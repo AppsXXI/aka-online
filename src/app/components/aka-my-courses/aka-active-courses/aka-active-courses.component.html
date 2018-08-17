@@ -1,20 +1,2 @@
 <h-title level="1">Continuar Viendo</h-title>
-
-<section class="courses my-courses actives">
-
-    <ng-container *ngFor="let course of courses">
-      <aka-course-card
-      [approved]="course.coverage.approved"
-      [marked]="course.marked"
-      [title]="course.title"
-      [icon]="course.icon"
-      [brief]="course.brief"
-      [difficult]="course.attributes.difficult"
-      [rating]="course.attributes.rating"
-      [is-free]="course.attributes.free"
-      [is-started]="course.coverage.started"
-      [coverage]="course.coverage.progress"
-      [teachers]="course.teachers"></aka-course-card>
-    </ng-container>
-  
-  </section>
+<aka-courses [courses]="courses"></aka-courses>

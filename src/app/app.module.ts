@@ -15,11 +15,14 @@ import { AkaLoginScreenComponent } from './components/aka-login-screen/aka-login
 import { AkaModalComponent } from './commons/components/aka-modal/aka-modal.component';
 import { AkaModalsComponent } from './commons/components/aka-modals/aka-modals.component.';
 import { AkaCourseCardComponent } from './commons/components/aka-course-card/aka-course-card.component';
+import { AkaCoursesComponent } from './commons/components/aka-courses/aka-courses.component';
 import { AkaMyCoursesComponent } from './components/aka-my-courses/aka-my-courses.component';
 import { AkaActiveCoursesComponent } from './components/aka-my-courses/aka-active-courses/aka-active-courses.component';
 import { AkaApprovedCoursesComponent } from './components/aka-my-courses/aka-approved-courses/aka-approved-courses.component';
 import { AkaPathComponent } from './components/aka-my-courses/aka-path-courses/aka-path-courses.component';
 import { AkaExploreComponent } from './components/aka-explore/aka-explore.component';
+import { AkaCategoriesComponent } from './components/aka-explore/aka-categories/aka-categories.component';
+import { AkaDifficultyComponent } from './components/aka-explore/aka-difficulty/aka-difficulty.component';
 
 // SERVICES
 import { AkaBasicsService } from './commons/services/aka-basics.service';
@@ -35,11 +38,14 @@ import { AkaBasicsService } from './commons/services/aka-basics.service';
     AkaModalComponent,
     AkaModalsComponent,
     AkaCourseCardComponent,
+    AkaCoursesComponent,
     AkaMyCoursesComponent,
     AkaActiveCoursesComponent,
     AkaApprovedCoursesComponent,
     AkaPathComponent,
-    AkaExploreComponent
+    AkaExploreComponent,
+    AkaCategoriesComponent,
+    AkaDifficultyComponent
   ],
   imports: [
     BrowserModule,

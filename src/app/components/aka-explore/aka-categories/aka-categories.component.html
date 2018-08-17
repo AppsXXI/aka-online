@@ -1,0 +1,30 @@
+<h-title>Explora por categoría</h-title>
+
+<section class="category desarrollo-web">
+
+  <h2 class="category-title">
+    <div class="title">
+      <span class="primary">Desarrollo Web</span>
+      <span class="secondary">12 cursos para ver</span>
+    </div>
+    
+    <div class="actions">
+      <a class="action view-all" href="#">
+        <clr-icon shape="video-gallery" size="24"></clr-icon>
+      </a>
+      <a class="action bookmark-all" href="#">
+        <clr-icon shape="bookmark" size="24"></clr-icon>
+      </a>
+      <a class="action filter" href="#">
+        <clr-icon shape="filter" size="24"></clr-icon>
+      </a>
+    </div>
+
+    <a class="action collapse" href="#">
+      <clr-icon shape="angle" size="24"></clr-icon>
+    </a>
+  </h2>
+  
+  <aka-courses [courses]="courses"></aka-courses>
+
+</section>

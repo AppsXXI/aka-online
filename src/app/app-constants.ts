@@ -25,9 +25,9 @@ export const CONSTANTS = {
         URL: 'category',
         FULL_URL: 'explore/category'
       },
-      ALPHABET: {
-        URL: 'alphabet',
-        FULL_URL: 'explore/alphabet'
+      DIFFICULTY: {
+        URL: 'difficulty',
+        FULL_URL: 'explore/difficulty'
       }
     }
   },

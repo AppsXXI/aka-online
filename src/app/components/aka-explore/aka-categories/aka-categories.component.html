@@ -1,5 +1,3 @@
-<h-title>Explora por categoría</h-title>
-
 <section class="category desarrollo-web">
 
   <h2 class="category-title">
@@ -9,14 +7,33 @@
     </div>
     
     <div class="actions">
-      <a class="action view-all" href="#">
+      <!-- <span *ngFor="let teacher of teachers"
+      role="tooltip"
+      aria-haspopup="true"
+      class="tooltip tooltip-sm tooltip-top-left teacher">
+        <img [src]="teacher.picture" [alt]="teacher.name">
+        <span class="tooltip-content">{{teacher.name}}</span>
+      </span> -->
+      
+      <a role="tooltip" href="#"
+      class="action view-all tooltip tooltip-sm tooltip-bottom-left"
+      aria-haspopup="true">
         <clr-icon shape="video-gallery" size="24"></clr-icon>
+        <span class="tooltip-content">Ver todos los cursos</span>
       </a>
-      <a class="action bookmark-all" href="#">
+
+      <a role="tooltip" href="#"
+      class="action bookmark-all tooltip tooltip-sm tooltip-bottom-left"
+      aria-haspopup="true">
         <clr-icon shape="bookmark" size="24"></clr-icon>
+        <span class="tooltip-content">Agregar todos a mi plan</span>
       </a>
-      <a class="action filter" href="#">
+
+      <a role="tooltip" href="#"
+      class="action filter tooltip tooltip-sm tooltip-bottom-left"
+      aria-haspopup="true">
         <clr-icon shape="filter" size="24"></clr-icon>
+        <span class="tooltip-content">Filtrar</span>
       </a>
     </div>
 

@@ -1,0 +1,48 @@
+
+<section class="category"
+[ngClass]="{'collapsed': collapsed}">
+
+  <h2 class="category-title">
+    <div class="title">
+      <span class="primary">{{group.title}}</span>
+      <span class="secondary">{{group.courses.length}} cursos para ver</span>
+    </div>
+    
+    <div class="actions">
+      <a role="tooltip" href="#"
+      class="action view-all tooltip tooltip-sm tooltip-bottom-left"
+      aria-haspopup="true">
+        <clr-icon shape="video-gallery" size="20"></clr-icon>
+        <span class="tooltip-content">Ver todos los cursos</span>
+      </a>
+
+      <a role="tooltip" href="#"
+      class="action bookmark-all tooltip tooltip-sm tooltip-bottom-left"
+      aria-haspopup="true">
+        <clr-icon shape="bookmark" size="20"></clr-icon>
+        <span class="tooltip-content">Agregar todos a mi plan</span>
+      </a>
+
+      <a role="tooltip" href="#"
+      class="action filter tooltip tooltip-sm tooltip-bottom-left"
+      aria-haspopup="true">
+        <clr-icon shape="filter" size="20"></clr-icon>
+        <span class="tooltip-content">Filtrar</span>
+      </a>
+    </div>
+
+    <a class="action collapse"
+    (click)="collapsed = !collapsed">
+      <clr-icon shape="angle"
+      size="20"
+      [dir]="collapsed ? 'down' : 'up'"></clr-icon>
+    </a>
+  </h2>
+  
+  <section class="category-content">
+    <div class="content-inner">
+      <aka-courses [courses]="group.courses"></aka-courses>
+    </div>
+  </section>
+
+</section>

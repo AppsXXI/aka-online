@@ -1,5 +1,8 @@
 @import './scss-imports';
 
+html {
+  font-size: 22px;
+}
 h1, h2, h3, h4, h5, h6 {
   margin-top: .5em;
   margin-bottom: 1em;
@@ -8,5 +11,7 @@ hr {
   width: 100%;
 }
 .aka-shadow {
+  position: relative;
+  z-index: 100;
   box-shadow: 0 0px 4px rgba(0,0,0,.5);
 }

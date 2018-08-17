@@ -2,6 +2,10 @@
   <ng-content></ng-content>
 </ng-template>
 
+<h1 *ngIf="!level">
+  <span><ng-container *ngTemplateOutlet="textTemplate"></ng-container></span>
+</h1>
+
 <ng-container [ngSwitch]="level">
   <h1 *ngSwitchCase="1">
     <span><ng-container *ngTemplateOutlet="textTemplate"></ng-container></span>

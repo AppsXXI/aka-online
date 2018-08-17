@@ -16,6 +16,9 @@ import { AkaModalComponent } from './commons/components/aka-modal/aka-modal.comp
 import { AkaModalsComponent } from './commons/components/aka-modals/aka-modals.component.';
 import { AkaCourseCardComponent } from './commons/components/aka-course-card/aka-course-card.component';
 import { AkaCoursesComponent } from './commons/components/aka-courses/aka-courses.component';
+import { AkaGroupCollapsable } from './commons/components/aka-group-collapsable/aka-group-collapsable.component';
+
+// SCREEN COMPONENTS
 import { AkaMyCoursesComponent } from './components/aka-my-courses/aka-my-courses.component';
 import { AkaActiveCoursesComponent } from './components/aka-my-courses/aka-active-courses/aka-active-courses.component';
 import { AkaApprovedCoursesComponent } from './components/aka-my-courses/aka-approved-courses/aka-approved-courses.component';
@@ -29,6 +32,7 @@ import { AkaBasicsService } from './commons/services/aka-basics.service';
 
 @NgModule({
   declarations: [
+    // COMPONENTS
     HTitleComponent,
     Aka404NotFoundComponent,
     AppComponent,
@@ -39,6 +43,8 @@ import { AkaBasicsService } from './commons/services/aka-basics.service';
     AkaModalsComponent,
     AkaCourseCardComponent,
     AkaCoursesComponent,
+    AkaGroupCollapsable,
+    // SCREEN COMPONENTS
     AkaMyCoursesComponent,
     AkaActiveCoursesComponent,
     AkaApprovedCoursesComponent,

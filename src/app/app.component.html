@@ -4,9 +4,13 @@
   class="aka-shadow"></aka-navigation>
 
   <div class="content-container">
-    <section class="content-area">
-      <router-outlet></router-outlet>
-    </section>
+
+    <perfect-scrollbar [config]="config">
+      <section class="content-area">
+        <router-outlet></router-outlet>
+      </section>
+    </perfect-scrollbar>
+
   </div>
 
 </clr-main-container>

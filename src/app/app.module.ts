@@ -4,13 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ClarityModule, ClrFormsNextModule } from "@clr/angular";
 import { AppRoutingModule } from './app-routing.module';
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-
-const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-  suppressScrollX: true
-};
 
 // COMPONENTS
 import { HTitleComponent } from './commons/components/basics/h-title/h-title.component';
@@ -66,15 +59,10 @@ import { AkaBasicsService } from './commons/services/aka-basics.service';
     FormsModule,
     ClarityModule,
     ClrFormsNextModule,
-    AppRoutingModule,
-    PerfectScrollbarModule
+    AppRoutingModule
   ],
   providers: [
-    AkaBasicsService,
-    {
-      provide: PERFECT_SCROLLBAR_CONFIG,
-      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-    }
+    AkaBasicsService
   ],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]

@@ -1,5 +1,19 @@
 @import './scss-imports';
 
+::-webkit-scrollbar-thumb {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: #ddd;
+  min-height: 40px;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  height: 8px;
+  width: 8px;
+}
+
 html {
   font-size: 22px;
 }

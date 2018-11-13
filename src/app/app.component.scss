@@ -1,3 +1,9 @@
+.content-container {
+  .content-area {
+    padding-right: calc(1rem - 8px);
+  }
+}
+
 :host-context(.path-rule-login) {
   .content-container {
     position: absolute;

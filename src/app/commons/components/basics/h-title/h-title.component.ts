@@ -7,5 +7,5 @@ import { Component, Input } from "@angular/core";
 })
 export class HTitleComponent {
   @Input('level')
-  private level: string;
+  public level: string;
 }

@@ -28,13 +28,13 @@
           <h5>O con tus datos</h5>
           <clr-input-container>
             <label>Email</label>
-            <input clrInput type="text" [(ngModel)]="email" name="email" required />
+            <input clrInput type="text" [(ngModel)]="user.email" name="email" required />
             <clr-control-error *clrIfError="'required'">El email es requerido para iniciar sesión</clr-control-error>
           </clr-input-container>
                         
           <clr-input-container>
             <label>Contraseña</label>
-            <input clrInput type="password" [(ngModel)]="password" name="password" required />
+            <input clrInput type="password" [(ngModel)]="user.password" name="password" required />
             <clr-control-error *clrIfError="'required'">El password es requerido para iniciar sesión</clr-control-error>
           </clr-input-container>
         </div>

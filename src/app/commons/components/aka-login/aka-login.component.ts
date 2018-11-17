@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './aka-login.component.html',
   styleUrls: ['./aka-login.component.scss']
 })
-export class AkaLoginComponent {}
+export class AkaLoginComponent {
+  public user: any = {};
+}

@@ -29,6 +29,7 @@ import { AkaDifficultyComponent } from './components/aka-explore/aka-difficulty/
 
 // SERVICES
 import { AkaBasicsService } from './commons/services/aka-basics.service';
+import { AkaAuthService } from './commons/services/aka-auth.service';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { AkaBasicsService } from './commons/services/aka-basics.service';
     AppRoutingModule
   ],
   providers: [
-    AkaBasicsService
+    AkaBasicsService,
+    AkaAuthService
   ],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
